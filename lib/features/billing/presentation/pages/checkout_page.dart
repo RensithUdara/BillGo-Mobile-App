@@ -143,9 +143,9 @@ class _CheckoutPageState extends State<CheckoutPage> {
 
                     // Bottom Bar
                     Container(
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: AppTheme.surfaceColor,
-                        borderRadius: const BorderRadius.horizontal(
+                        borderRadius: BorderRadius.horizontal(
                             left: Radius.circular(24),
                             right: Radius.circular(24)),
                         boxShadow: AppTheme.shadowXl,
