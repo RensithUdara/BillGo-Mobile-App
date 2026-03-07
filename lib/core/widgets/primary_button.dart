@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../theme/app_theme.dart';
 
 class PrimaryButton extends StatelessWidget {
   final VoidCallback? onPressed;
@@ -27,20 +28,20 @@ class PrimaryButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final style = ElevatedButton.styleFrom(
-      backgroundColor: Theme.of(context).primaryColor,
+      backgroundColor: AppTheme.primaryColor,
       foregroundColor: Colors.white,
       padding: padding,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(borderRadius),
       ),
       elevation: elevation,
-      shadowColor: Theme.of(context).primaryColor.withValues(alpha: 0.4),
-      minimumSize: isFullWidth ? const Size.fromHeight(50) : null,
+      shadowColor: AppTheme.primaryColor.withValues(alpha: 0.5),
+      minimumSize: isFullWidth ? const Size.fromHeight(56) : null,
     );
 
     if (icon != null) {
       return Padding(
-        padding: const EdgeInsets.all(24.0),
+        padding: const EdgeInsets.all(20.0),
         child: ElevatedButton.icon(
           onPressed: isLoading ? null : onPressed,
           icon: isLoading
@@ -49,13 +50,18 @@ class PrimaryButton extends StatelessWidget {
                   height: 20,
                   child: CircularProgressIndicator(
                     color: Colors.white,
-                    strokeWidth: 2,
+                    strokeWidth: 2.5,
                   ),
                 )
               : Icon(icon),
           label: Text(
             label,
-            style: textStyle,
+            style: textStyle ??
+                const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,
+                  letterSpacing: 0.5,
+                ),
           ),
           style: style,
         ),
@@ -63,7 +69,7 @@ class PrimaryButton extends StatelessWidget {
     }
 
     return Padding(
-      padding: const EdgeInsets.all(24.0),
+      padding: const EdgeInsets.all(20.0),
       child: ElevatedButton(
         onPressed: isLoading ? null : onPressed,
         style: style,
@@ -73,12 +79,17 @@ class PrimaryButton extends StatelessWidget {
                 height: 20,
                 child: CircularProgressIndicator(
                   color: Colors.white,
-                  strokeWidth: 2,
+                  strokeWidth: 2.5,
                 ),
               )
             : Text(
                 label,
-                style: textStyle,
+                style: textStyle ??
+                    const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      letterSpacing: 0.5,
+                    ),
               ),
       ),
     );
