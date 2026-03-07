@@ -1,14 +1,15 @@
 import 'package:go_router/go_router.dart';
-import '../../features/billing/presentation/pages/splash_screen.dart';
+
+import '../../features/billing/presentation/pages/checkout_page.dart';
 import '../../features/billing/presentation/pages/home_page.dart';
-import '../../features/product/presentation/pages/product_list_page.dart';
+import '../../features/billing/presentation/pages/scanner_page.dart';
+import '../../features/billing/presentation/pages/splash_screen.dart';
+import '../../features/product/domain/entities/product.dart';
 import '../../features/product/presentation/pages/add_product_page.dart';
 import '../../features/product/presentation/pages/edit_product_page.dart';
-import '../../features/shop/presentation/pages/shop_details_page.dart';
+import '../../features/product/presentation/pages/product_list_page.dart';
 import '../../features/settings/presentation/pages/settings_page.dart';
-import '../../features/billing/presentation/pages/scanner_page.dart';
-import '../../features/billing/presentation/pages/checkout_page.dart';
-import '../../features/product/domain/entities/product.dart';
+import '../../features/shop/presentation/pages/shop_details_page.dart';
 
 final router = GoRouter(
   initialLocation: '/splash',
