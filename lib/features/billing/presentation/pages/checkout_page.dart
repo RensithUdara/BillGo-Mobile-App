@@ -1,5 +1,5 @@
-import 'package:billgo_mobile_app/core/widgets/primary_button.dart';
 import 'package:billgo_mobile_app/core/theme/app_theme.dart';
+import 'package:billgo_mobile_app/core/widgets/primary_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -18,7 +18,7 @@ class CheckoutPage extends StatefulWidget {
 class _CheckoutPageState extends State<CheckoutPage> {
   @override
   Widget build(BuildContext context) {
-    final borderColor = AppTheme.dividerColor;
+    const borderColor = AppTheme.dividerColor;
 
     return PopScope(
         canPop: false,
@@ -95,7 +95,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                                     // Header row
                                     TableRow(
                                       decoration: const BoxDecoration(
-                                        color: Color(0xFFF8FAFC),
+                                        color: AppTheme.backgroundColor,
                                         border: Border(
                                             bottom:
                                                 BorderSide(color: borderColor)),
@@ -144,17 +144,11 @@ class _CheckoutPageState extends State<CheckoutPage> {
                     // Bottom Bar
                     Container(
                       decoration: BoxDecoration(
-                        color: Colors.white.withValues(alpha: 0.9),
+                        color: AppTheme.surfaceColor,
                         borderRadius: const BorderRadius.horizontal(
                             left: Radius.circular(24),
                             right: Radius.circular(24)),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black.withValues(alpha: 0.05),
-                            blurRadius: 10,
-                            offset: const Offset(0, -4),
-                          ),
-                        ],
+                        boxShadow: AppTheme.shadowXl,
                       ),
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
