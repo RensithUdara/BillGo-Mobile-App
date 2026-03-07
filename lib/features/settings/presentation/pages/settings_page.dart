@@ -119,6 +119,43 @@ class _SettingsPageState extends State<SettingsPage> {
 
             const SizedBox(height: 24),
 
+            // Analytics Section
+            _buildSectionHeader('Analytics & Reports'),
+            _buildListGroup(
+              children: [
+                _buildListItem(
+                  icon: Icons.dashboard,
+                  title: 'Dashboard',
+                  subtitle: 'View sales summary and statistics',
+                  onTap: () => context.push('/dashboard'),
+                ),
+                _buildDivider(),
+                _buildListItem(
+                  icon: Icons.bar_chart,
+                  title: 'Reports',
+                  subtitle: 'Detailed sales and product analytics',
+                  onTap: () => context.push('/reports'),
+                ),
+              ],
+            ),
+
+            const SizedBox(height: 24),
+
+            // Standard Section
+            _buildSectionHeader('Standard'),
+            _buildListGroup(
+              children: [
+                _buildListItem(
+                  icon: Icons.help_outline,
+                  title: 'Help & About',
+                  subtitle: 'FAQs, tutorials, and app information',
+                  onTap: () => context.push('/help'),
+                ),
+              ],
+            ),
+
+            const SizedBox(height: 24),
+
             // Hardware Section
             _buildSectionHeader('Hardware'),
             BlocConsumer<PrinterBloc, PrinterState>(

@@ -4,10 +4,13 @@ import '../../features/billing/presentation/pages/checkout_page.dart';
 import '../../features/billing/presentation/pages/home_page.dart';
 import '../../features/billing/presentation/pages/scanner_page.dart';
 import '../../features/billing/presentation/pages/splash_screen.dart';
+import '../../features/dashboard/presentation/pages/dashboard_page.dart';
+import '../../features/help/presentation/pages/help_about_page.dart';
 import '../../features/product/domain/entities/product.dart';
 import '../../features/product/presentation/pages/add_product_page.dart';
 import '../../features/product/presentation/pages/edit_product_page.dart';
 import '../../features/product/presentation/pages/product_list_page.dart';
+import '../../features/reports/presentation/pages/reports_page.dart';
 import '../../features/settings/presentation/pages/settings_page.dart';
 import '../../features/shop/presentation/pages/shop_details_page.dart';
 
@@ -60,6 +63,18 @@ final router = GoRouter(
     GoRoute(
       path: '/shop',
       builder: (context, state) => const ShopDetailsPage(),
+    ),
+    GoRoute(
+      path: '/dashboard',
+      builder: (context, state) => const DashboardPage(),
+    ),
+    GoRoute(
+      path: '/reports',
+      builder: (context, state) => const ReportsPage(),
+    ),
+    GoRoute(
+      path: '/help',
+      builder: (context, state) => const HelpAboutPage(),
     ),
   ],
 );
