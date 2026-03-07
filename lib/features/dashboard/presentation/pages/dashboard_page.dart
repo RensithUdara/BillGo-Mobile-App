@@ -119,7 +119,7 @@ class _DashboardPageState extends State<DashboardPage> {
         _buildStatCard(
           icon: Icons.shopping_cart,
           title: 'Today Sales',
-          value: '₹0',
+          value: 'Rs.0',
           color: AppTheme.secondaryColor,
         ),
         _buildStatCard(
@@ -131,7 +131,7 @@ class _DashboardPageState extends State<DashboardPage> {
         _buildStatCard(
           icon: Icons.trending_up,
           title: 'Avg. Sale',
-          value: '₹0',
+          value: 'Rs.0',
           color: Colors.orange,
         ),
       ],
@@ -194,7 +194,7 @@ class _DashboardPageState extends State<DashboardPage> {
         children: [
           _buildActivityRow(
             'Total Revenue',
-            '₹0',
+            'Rs.0',
             color: AppTheme.successColor,
           ),
           const Divider(height: 24),
