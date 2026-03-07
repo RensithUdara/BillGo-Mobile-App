@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import '../bloc/product_bloc.dart';
-import '../../domain/entities/product.dart';
+
 import '../../../../core/theme/app_theme.dart';
 import '../../../../core/utils/app_validators.dart';
+import '../../domain/entities/product.dart';
+import '../bloc/product_bloc.dart';
 
 class ProductListPage extends StatefulWidget {
   const ProductListPage({super.key});
@@ -194,7 +195,7 @@ class _ProductListPageState extends State<ProductListPage> {
                                 ),
                                 const SizedBox(height: 4),
                                 Text(
-                                  '₹${product.price.toStringAsFixed(2)}',
+                                  'Rs.${product.price.toStringAsFixed(2)}',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w500,
                                       color: Colors.grey[600]),

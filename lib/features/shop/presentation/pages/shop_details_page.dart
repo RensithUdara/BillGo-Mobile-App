@@ -203,7 +203,7 @@ class _ShopDetailsPageState extends State<ShopDetailsPage> {
                       _buildFormField(
                         controller: _nameController,
                         label: 'Shop Name',
-                        hint: 'e.g., QuickMart Superstore',
+                        hint: 'e.g., Ceylon Superstore',
                         icon: Icons.business,
                         validator: AppValidators.required('Shop name required'),
                       ),
@@ -211,7 +211,7 @@ class _ShopDetailsPageState extends State<ShopDetailsPage> {
                       _buildFormField(
                         controller: _phoneController,
                         label: 'Phone Number',
-                        hint: '+91 9876543210',
+                        hint: '+94 771236985',
                         icon: Icons.phone,
                         keyboardType: TextInputType.phone,
                         validator: AppValidators.required('Phone number required'),

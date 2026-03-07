@@ -371,7 +371,7 @@ class _HomePageState extends State<HomePage> {
                         Text('TOTAL',
                             style: Theme.of(context).textTheme.labelSmall),
                         Text(
-                          '₹${state.totalAmount.toStringAsFixed(2)}',
+                          'Rs.${state.totalAmount.toStringAsFixed(2)}',
                           style: Theme.of(context)
                               .textTheme
                               .headlineMedium
@@ -492,7 +492,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 const SizedBox(height: 6),
                 Text(
-                  '₹${item.product.price.toStringAsFixed(2)}',
+                  'Rs.${item.product.price.toStringAsFixed(2)}',
                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                         fontWeight: FontWeight.bold,
                         color: AppTheme.primaryColor,

@@ -1,7 +1,7 @@
+import 'package:app_settings/app_settings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:app_settings/app_settings.dart';
 
 import '../../../../core/theme/app_theme.dart';
 import '../../../shop/presentation/bloc/shop_bloc.dart';
@@ -49,8 +49,8 @@ class _SettingsPageState extends State<SettingsPage> {
               padding: const EdgeInsets.symmetric(vertical: 32, horizontal: 24),
               child: BlocBuilder<ShopBloc, ShopState>(
                 builder: (context, state) {
-                  String shopName = 'Elite Groceries';
-                  String initials = 'EG';
+                  String shopName = 'Ceylon Groceries';
+                  String initials = 'CG';
                   if (state is ShopLoaded && state.shop.name.isNotEmpty) {
                     shopName = state.shop.name;
                     final parts = shopName.split(' ');

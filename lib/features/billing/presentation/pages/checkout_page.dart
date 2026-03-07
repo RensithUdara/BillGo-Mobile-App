@@ -118,11 +118,11 @@ class _CheckoutPageState extends State<CheckoutPage> {
                                             TextAlign.left,
                                           ),
                                           _buildDataCell(
-                                              '₹${item.product.price.toStringAsFixed(2)}',
+                                              'Rs.${item.product.price.toStringAsFixed(2)}',
                                               TextAlign.right,
                                               isSubtitle: true),
                                           _buildDataCell(
-                                              '₹${item.total.toStringAsFixed(2)}',
+                                              'Rs.${item.total.toStringAsFixed(2)}',
                                               TextAlign.right,
                                               isBold: true),
                                         ],
@@ -201,7 +201,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                                       ),
                                     ),
                                     Text(
-                                      '₹${billingState.totalAmount.toStringAsFixed(2)}',
+                                      'Rs.${billingState.totalAmount.toStringAsFixed(2)}',
                                       style: const TextStyle(
                                         fontSize: 24,
                                         fontWeight: FontWeight.bold,
