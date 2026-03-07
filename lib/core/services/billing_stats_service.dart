@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 class BillingStatsService {
@@ -26,8 +25,8 @@ class BillingStatsService {
   static List<Map<String, dynamic>> getTopProducts(
     List<Map<String, dynamic>> products,
   ) {
-    List<Map<String, dynamic>> sorted =
-        List.from(products)..sort((a, b) => (b['sold'] ?? 0).compareTo(a['sold'] ?? 0));
+    List<Map<String, dynamic>> sorted = List.from(products)
+      ..sort((a, b) => (b['sold'] ?? 0).compareTo(a['sold'] ?? 0));
     return sorted.take(5).toList();
   }
 
