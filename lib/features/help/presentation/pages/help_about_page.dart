@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import '../../../../core/theme/app_theme.dart';
+
 import '../../../../core/services/app_utilities_service.dart';
+import '../../../../core/theme/app_theme.dart';
 
 class HelpAboutPage extends StatelessWidget {
   const HelpAboutPage({super.key});
@@ -117,11 +118,12 @@ class HelpAboutPage extends StatelessWidget {
                   ),
                   subtitle: Text(item['description'] as String),
                   trailing: const Icon(Icons.chevron_right),
-                  onTap: () => _showHelpDetail(context, item['title'] as String),
+                  onTap: () =>
+                      _showHelpDetail(context, item['title'] as String),
                 ),
               ),
             );
-          }).toList(),
+          }),
           const SizedBox(height: 24),
           _buildContactCard(context),
         ],
@@ -149,7 +151,7 @@ class HelpAboutPage extends StatelessWidget {
                   width: 80,
                   height: 80,
                   decoration: BoxDecoration(
-                    gradient: LinearGradient(
+                    gradient: const LinearGradient(
                       colors: [AppTheme.primaryColor, AppTheme.secondaryColor],
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
@@ -160,10 +162,11 @@ class HelpAboutPage extends StatelessWidget {
                   child: Center(
                     child: Text(
                       'BG',
-                      style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                          ),
+                      style:
+                          Theme.of(context).textTheme.headlineSmall?.copyWith(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
                     ),
                   ),
                 ),
@@ -217,22 +220,19 @@ class HelpAboutPage extends StatelessWidget {
             'Product management',
             'Multiple payment methods',
             'Shop configuration',
-          ]
-              .map((feature) {
-                return Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 8),
-                  child: Row(
-                    children: [
-                      Icon(Icons.check_circle,
-                          color: AppTheme.successColor, size: 20),
-                      const SizedBox(width: 12),
-                      Text(feature,
-                          style: Theme.of(context).textTheme.bodyMedium),
-                    ],
-                  ),
-                );
-              })
-              .toList(),
+          ].map((feature) {
+            return Padding(
+              padding: const EdgeInsets.symmetric(vertical: 8),
+              child: Row(
+                children: [
+                  const Icon(Icons.check_circle,
+                      color: AppTheme.successColor, size: 20),
+                  const SizedBox(width: 12),
+                  Text(feature, style: Theme.of(context).textTheme.bodyMedium),
+                ],
+              ),
+            );
+          }),
           const SizedBox(height: 24),
 
           // About Section
@@ -255,7 +255,7 @@ class HelpAboutPage extends StatelessWidget {
               'With barcode scanning, receipt printing, and comprehensive analytics, BillGo makes managing your sales effortless.',
               style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                     height: 1.6,
-              ),
+                  ),
             ),
           ),
           const SizedBox(height: 24),
@@ -318,8 +318,8 @@ class HelpAboutPage extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-              onPressed: () =>
-                  _openUrl('mailto:support@billgoapp.com?subject=Support Request'),
+              onPressed: () => _openUrl(
+                  'mailto:support@billgoapp.com?subject=Support Request'),
               child: const Text('Contact Support'),
             ),
           ),
