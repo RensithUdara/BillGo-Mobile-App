@@ -1,5 +1,3 @@
-import 'package:billgo_mobile_app/core/widgets/input_label.dart';
-import 'package:billgo_mobile_app/core/widgets/primary_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -24,7 +22,7 @@ class _ShopDetailsPageState extends State<ShopDetailsPage> {
   late TextEditingController _phoneController;
   late TextEditingController _upiController;
   late TextEditingController _footerController;
-  bool _isEditing = false;
+  final bool _isEditing = false;
 
   @override
   void initState() {
