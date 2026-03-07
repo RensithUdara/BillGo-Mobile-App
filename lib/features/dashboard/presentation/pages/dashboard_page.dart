@@ -193,20 +193,20 @@ class _DashboardPageState extends State<DashboardPage> {
       child: Column(
         children: [
           _buildActivityRow(
-            'Total Revenue',
-            'Rs.0',
+            label: 'Total Revenue',
+            value: 'Rs.0',
             color: AppTheme.successColor,
           ),
           const Divider(height: 24),
           _buildActivityRow(
-            'Invoices Generated',
-            '0',
+            label: 'Invoices Generated',
+            value: '0',
             color: AppTheme.primaryColor,
           ),
           const Divider(height: 24),
           _buildActivityRow(
-            'Items Sold',
-            '0',
+            label: 'Items Sold',
+            value: '0',
             color: AppTheme.secondaryColor,
           ),
         ],
