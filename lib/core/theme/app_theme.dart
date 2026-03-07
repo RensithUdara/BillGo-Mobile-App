@@ -63,7 +63,8 @@ class AppTheme {
     ),
   ];
 
-  static final TextTheme textTheme = GoogleFonts.ibmPlexSansTextTheme().copyWith(
+  static final TextTheme textTheme =
+      GoogleFonts.ibmPlexSansTextTheme().copyWith(
     bodyLarge: GoogleFonts.ibmPlexSans(
       fontSize: 15,
       fontWeight: FontWeight.w500,
@@ -176,7 +177,8 @@ class AppTheme {
           borderRadius: BorderRadius.circular(12),
           borderSide: const BorderSide(color: errorColor, width: 2),
         ),
-        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+        contentPadding:
+            const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
@@ -185,7 +187,8 @@ class AppTheme {
           elevation: 6,
           shadowColor: const Color(0x4D6C63FF),
           padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
           textStyle: textTheme.labelLarge?.copyWith(
             fontWeight: FontWeight.bold,
             fontSize: 16,
@@ -197,7 +200,8 @@ class AppTheme {
           foregroundColor: primaryColor,
           side: const BorderSide(color: primaryColor, width: 1.5),
           padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 24),
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         ),
       ),
       floatingActionButtonTheme: FloatingActionButtonThemeData(
@@ -205,7 +209,8 @@ class AppTheme {
         foregroundColor: Colors.white,
         elevation: 8,
         highlightElevation: 12,
-        extendedPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+        extendedPadding:
+            const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       ),
       chipTheme: ChipThemeData(
