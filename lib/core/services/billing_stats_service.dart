@@ -32,7 +32,7 @@ class BillingStatsService {
 
   /// Format currency
   static String formatCurrency(double amount) {
-    return '₹${amount.toStringAsFixed(2)}';
+    return 'Rs.${amount.toStringAsFixed(2)}';
   }
 
   /// Get formatted date
