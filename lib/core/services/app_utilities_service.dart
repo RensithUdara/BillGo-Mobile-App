@@ -26,7 +26,8 @@ class AppUtilitiesService {
 
   /// Validate phone number
   static bool isValidPhone(String phone) {
-    return RegExp(r'^[0-9]{10,}$').hasMatch(phone.replaceAll(RegExp(r'[^0-9]'), ''));
+    return RegExp(r'^[0-9]{10,}$')
+        .hasMatch(phone.replaceAll(RegExp(r'[^0-9]'), ''));
   }
 
   /// Validate UPI ID
@@ -45,7 +46,8 @@ class AppUtilitiesService {
   /// Get total days in month
   static int getDaysInMonth(int month, int year) {
     DateTime firstDayNextMonth = DateTime(year, month + 1, 1);
-    DateTime lastDayThisMonth = firstDayNextMonth.subtract(const Duration(days: 1));
+    DateTime lastDayThisMonth =
+        firstDayNextMonth.subtract(const Duration(days: 1));
     return lastDayThisMonth.day;
   }
 
@@ -57,7 +59,9 @@ class AppUtilitiesService {
   /// Check if date is today
   static bool isToday(DateTime date) {
     final now = DateTime.now();
-    return date.year == now.year && date.month == now.month && date.day == now.day;
+    return date.year == now.year &&
+        date.month == now.month &&
+        date.day == now.day;
   }
 
   /// Check if date is yesterday
