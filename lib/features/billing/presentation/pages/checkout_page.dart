@@ -1,4 +1,5 @@
 import 'package:billgo_mobile_app/core/widgets/primary_button.dart';
+import 'package:billgo_mobile_app/core/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -17,7 +18,7 @@ class CheckoutPage extends StatefulWidget {
 class _CheckoutPageState extends State<CheckoutPage> {
   @override
   Widget build(BuildContext context) {
-    const borderColor = Color(0xFFE5E5EA);
+    final borderColor = AppTheme.dividerColor;
 
     return PopScope(
         canPop: false,
@@ -28,14 +29,13 @@ class _CheckoutPageState extends State<CheckoutPage> {
         },
         child: Scaffold(
           appBar: AppBar(
-            title: const Text('Checkout',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600)),
+            title: const Text('Order Summary'),
             centerTitle: true,
-            backgroundColor: Colors.transparent,
+            backgroundColor: AppTheme.surfaceColor,
             elevation: 0,
             leading: IconButton(
-              icon: Icon(Icons.chevron_left,
-                  size: 28, color: Theme.of(context).primaryColor),
+              icon: const Icon(Icons.chevron_left,
+                  size: 28, color: AppTheme.primaryColor),
               onPressed: () {
                 context.read<BillingBloc>().add(ClearCartEvent());
                 context.go('/');
@@ -45,9 +45,13 @@ class _CheckoutPageState extends State<CheckoutPage> {
           body: BlocConsumer<BillingBloc, BillingState>(
             listener: (context, state) {
               if (state.printSuccess) {
-                ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                    content: Text('Printed successfully'),
-                    backgroundColor: Colors.green));
+                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                    content: const Text('Receipt printed successfully'),
+                    backgroundColor: AppTheme.successColor,
+                    behavior: SnackBarBehavior.floating,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    )));
                 // context.read<BillingBloc>().add(ClearCartEvent());
                 // context.go('/');
               }
@@ -74,16 +78,10 @@ class _CheckoutPageState extends State<CheckoutPage> {
                             // Table
                             Container(
                               decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(12),
+                                color: AppTheme.surfaceColor,
+                                borderRadius: BorderRadius.circular(14),
                                 border: Border.all(color: borderColor),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.black.withValues(alpha: 0.05),
-                                    blurRadius: 12,
-                                    offset: const Offset(0, 4),
-                                  )
-                                ],
+                                boxShadow: AppTheme.shadowMd,
                               ),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(12),
