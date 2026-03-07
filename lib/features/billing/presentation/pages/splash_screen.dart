@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+
 import '../../../../core/theme/app_theme.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -81,7 +82,7 @@ class _SplashScreenState extends State<SplashScreen>
                 const SizedBox(height: 40),
                 // App name with gradient effect
                 ShaderMask(
-                  shaderCallback: (bounds) => LinearGradient(
+                  shaderCallback: (bounds) => const LinearGradient(
                     colors: [
                       AppTheme.primaryColor,
                       AppTheme.secondaryColor,
